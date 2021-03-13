@@ -1,0 +1,228 @@
+//=================NORMALIZE=================================
+@import "normalize.css"; //===========================================================
+//=============FONTS========================
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+//==========================================
+//=============VARIABLES========================
+$ff: "Montserrat", sans-serif;
+$bg-btn: #cc8b86;
+$color: #533738;
+$bg1: #efe6e4;
+$bg2: #8d7370;
+$bg-team: #e2c4ba;
+//============================================
+//===============MIXINS=======================
+@mixin font-400 {
+   font-family: $ff;
+   font-weight: 400;
+}
+@mixin font-500 {
+   font-family: $ff;
+   font-weight: 500;
+}
+//=============================================
+//==================HEADER======================
+body {
+   margin: 0;
+   font-family: $ff;
+   color: $color;
+}
+
+.header {
+   padding: 36px 0 16px 0;
+   background: url("../img/header/1.jpg") no-repeat;
+   background-size: cover;
+   height: 750px;
+   &__container {
+      width: 1400px;
+      margin: 0 auto;
+      padding: 0 15px;
+   }
+   &__content-top {
+      margin-bottom: 90px;
+      display: flex;
+      font-size: 16px;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__logo {
+      background: url("../img/header/logo.svg") left no-repeat;
+      padding: 0 0 0 25px;
+      margin-right: auto;
+   }
+
+   &__brand {
+      text-align: center;
+      font-weight: 400;
+      font-size: 16px;
+   }
+
+   &__menu {
+   }
+
+   &__phone {
+      margin-left: auto;
+   }
+
+   &__number {
+   }
+
+   &__content-main {
+      margin-left: 90px;
+   }
+
+   &__title {
+      font-size: 50px;
+      text-align: left;
+      margin-bottom: 24px;
+   }
+
+   &__text {
+      margin-bottom: 60px;
+   }
+
+   &__button {
+   }
+}
+._container {
+}
+
+.menu {
+   &__body {
+   }
+
+   &__list {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+   }
+
+   &__link {
+      padding-right: 30px;
+   }
+}
+.text {
+   font-size: 18px;
+   line-height: 30px;
+}
+.btn {
+   background-color: $bg-btn;
+   font-size: 20px;
+   padding: 25px 65.88px 24px 67.91px;
+}
+
+//==============================================
+//==================MAIN==========================
+.main {
+   background-color: $bg1;
+   margin-bottom: auto;
+   &__about {
+      padding: 65px 0 20px 0;
+      //height: 850px;
+   }
+
+   &__title-about {
+      margin: 0 0 40px 0;
+   }
+
+   &__about-body {
+      margin: 0 auto;
+      width: 1200px;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+   }
+
+   &__pic-about {
+   }
+
+   &__pic {
+   }
+
+   &__text {
+      width: 530px;
+   }
+   &__p {
+      margin-top: 0;
+      margin-bottom: 40px;
+   }
+   &__list {
+      background-color: $bg2;
+      color: #ffffff;
+      margin-top: auto;
+   }
+   &__inner {
+      width: 1400px;
+      margin: 0 auto;
+   }
+   &__items {
+      padding: 80px 0;
+      display: flex;
+      justify-content: space-around;
+   }
+
+   &__item {
+      text-transform: uppercase;
+      font-size: 30px;
+      text-align: center;
+      line-height: 40px;
+   }
+}
+.title {
+   font-weight: 400;
+   text-transform: uppercase;
+   font-size: 40px;
+   text-align: center;
+}
+.text {
+}
+
+//==================================================
+//=====================WORKS========================
+.main {
+   &__works {
+      width: 1200px;
+      margin: 0 auto;
+      padding: 65px 0 20px 0;
+   }
+
+   &__works-title {
+      margin-bottom: 40px;
+      text-align: left;
+   }
+
+   &__works-body {
+   }
+
+   &__works-gallery {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 40px;
+   }
+   &__works-items {
+   }
+   &__works-item {
+      margin-bottom: 20px;
+      }
+   }
+   &__works-info {
+      display: none;
+   }
+   &__watch-all {
+      display: block;
+      font-weight: 500;
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 50px;
+      &::after {
+         content: url("/img/works/Arrow.svg");
+      }
+   }
+}
+.title {
+}
+
+//===================================================
