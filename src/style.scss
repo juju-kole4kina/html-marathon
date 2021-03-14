@@ -10,6 +10,8 @@ $color: #533738;
 $bg1: #efe6e4;
 $bg2: #8d7370;
 $bg-team: #e2c4ba;
+$bg-form: #f6ede9;
+
 //============================================
 //===============MIXINS=======================
 @mixin font-400 {
@@ -203,14 +205,12 @@ body {
       margin-bottom: 40px;
    }
    &__works-items {
-   }
-   &__works-item {
       margin-bottom: 20px;
-      }
    }
-   &__works-info {
-      display: none;
-   }
+   //&__works-item {
+
+   //}
+
    &__watch-all {
       display: block;
       font-weight: 500;
@@ -226,3 +226,198 @@ body {
 }
 
 //===================================================
+//===================TEAM============================
+.main {
+   &__team {
+      background-color: $bg-team;
+      padding: 65px 0 20px 0;
+   }
+
+   &__title-team {
+   }
+
+   &__team-body {
+      width: 1200px;
+      margin: 0 auto;
+   }
+
+   &__team-persons {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 35px;
+   }
+
+   &__person {
+      width: 320px;
+   }
+
+   &__preson-photo {
+      margin-bottom: 5px;
+   }
+
+   &__person-info {
+      width: 310px;
+      line-height: 30px;
+      font-size: 18px;
+      padding-right: 10px;
+      text-align: left;
+   }
+
+   &__team-works {
+   }
+
+   &__title-team-works {
+      margin-bottom: 40px;
+   }
+
+   &__works-steps {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+   }
+
+   &__work-step {
+   }
+
+   &__work-step-number {
+      margin: 0 auto;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      background-color: $bg2;
+      font-size: 30px;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 500;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__work-step-text {
+      width: 285px;
+      text-align: center;
+   }
+}
+.title {
+}
+.text {
+}
+
+//===================================================
+//=======================REVIEWS===========================
+.main {
+   &__reviews {
+      padding: 65px 0 65px 0;
+   }
+
+   &__title-reviews {
+   }
+
+   &__reviews-body {
+      padding: 0;
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+   }
+
+   &__arrow-left {
+      margin-right: 0;
+   }
+
+   &__reviews-text {
+      width: 400px;
+   }
+
+   &__reviews-photo {
+      width: 400px;
+      & img {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__arrow-right {
+      margin-left: 0;
+   }
+}
+.title {
+}
+.arrow {
+   width: 72px;
+   height: 72px;
+   border-radius: 50%;
+   background-color: $bg-btn;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.text {
+}
+.review-pic {
+}
+
+//======================================================
+//=================FEEDBACK===========================
+.main {
+   &__feedback {
+      background-color: $bg2;
+   }
+   &__feedback-wrapper {
+      width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+   }
+   &__feedback-body {
+      display: flex;
+      justify-content: center;
+   }
+   &__feedback-form {
+      width: 500px;
+   }
+
+   &__title-feedback {
+      text-align: left;
+      color: #ffffff;
+   }
+
+   &__feedback-text {
+      color: #ffffff;
+      width: 450px;
+   }
+   &__feedback-input {
+      width: 450px;
+      height: 35px;
+      background: transparent;
+      margin-bottom: 35px;
+
+      border: none;
+      border-bottom: 1px solid #ffffff;
+      &::placeholder {
+         color: $bg-form;
+         font-weight: 400;
+         font-size: 18px;
+      }
+   }
+   &__feedback-btn {
+      border: none;
+   }
+
+   &__feedback-location {
+   }
+
+   &__feedback-map {
+   }
+}
+.title {
+}
+.text {
+}
+.btn {
+}
+
+//=========================================================
