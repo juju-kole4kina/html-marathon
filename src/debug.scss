@@ -1,0 +1,162 @@
+//=================NORMALIZE=================================
+@import "normalize.css"; //===========================================================
+//=============FONTS========================
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+//==========================================
+//=============VARIABLES========================
+//=========font============
+$ff: "Montserrat", sans-serif;
+//===========================
+//==========colors==========
+$color: #533738;
+//========================
+//=========backgrounds========
+$bg-btn: #cc8b86;
+$bg1: #efe6e4;
+$bg2: #8d7370;
+$bg-team: #e2c4ba;
+$bg-form: #f6ede9;
+//==========================
+//==========width=============
+$minwidth: 320px;
+$mw: 1200;
+$md1: $mw + 12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
+//=============================
+
+//============================================
+//===============MIXINS=======================
+//===========================================
+//===========ENVELOPE==========================
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+   overflow: hidden;
+
+   font-family: $ff;
+   color: $color;
+}
+//==============================================
+//===================MAIN GRID=======================
+.container {
+   max-width: $mw + px;
+   margin: 0 auto;
+   width: 100%;
+   @media (max-width: $md1+px) {
+      max-width: 970px;
+   }
+   @media (max-width: $md2+px) {
+      max-width: 750px;
+   }
+   @media (max-width: $md3+px) {
+      max-width: none;
+      padding: 0 10px;
+   }
+}
+//===================================================
+
+//=================HEADER=======================
+//body {
+//  font-family: $ff;
+// color: $color;
+//}
+.container {
+   padding: 36px 0 16px 0;
+   height: 100px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+.header-body {
+   position: sticky;
+   z-index: 10;
+   padding: 30px 0;
+   margin-bottom: 90px;
+   display: flex;
+   font-size: 16px;
+   justify-content: space-between;
+   align-items: center;
+}
+.header-body-logo {
+   background: url("../img/header/logo.svg") left no-repeat;
+   padding: 0 0 0 25px;
+   margin-right: auto;
+   &__text {
+      text-align: center;
+      font-weight: 400;
+      font-size: 16px;
+   }
+}
+.header-body-menu {
+   margin: 0 auto;
+   &__link {
+      padding-right: 30px;
+      &:hover {
+      }
+      & span {
+         &:hover {
+            border-bottom: 2px solid $color;
+            //background-color: rgba(255, 255, 255, 0.4);
+         }
+      }
+   }
+}
+.header-body-menu-list {
+   display: flex;
+   justify-content: space-between;
+   text-align: center;
+}
+.header-body-phone {
+   &__text {
+      margin-left: auto;
+   }
+}
+
+//==============================================
+//==============MAIN============================
+.content {
+   background-color: $bg1;
+}
+.main {
+   position: absolute;
+   top: 0;
+   width: 100%;
+   padding: 150px 82px 16px 82px;
+   background: url("../img/header/1.jpg") no-repeat;
+   background-size: cover;
+   height: 750px;
+   &__column {
+      margin: 0 auto;
+      padding: 0 15px;
+   }
+}
+.main-body {
+   &__title {
+      font-size: 50px;
+      text-align: left;
+      margin-bottom: 24px;
+   }
+
+   &__text {
+      margin-bottom: 60px;
+   }
+
+   &__buttons {
+   }
+}
+.title {
+}
+.text {
+}
+.main-body-buttons {
+   &__item {
+   }
+}
+.btn {
+   background-color: $bg-btn;
+   font-size: 20px;
+   padding: 25px 65.88px 24px 67.91px;
+}
+
+//=============================================

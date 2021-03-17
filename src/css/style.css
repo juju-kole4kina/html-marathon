@@ -244,6 +244,7 @@ body {
 
 .main__feedback {
   background-color: #8d7370;
+  padding: 0;
 }
 .main__feedback-wrapper {
   width: 1200px;
@@ -280,4 +281,24 @@ body {
 }
 .main__feedback-btn {
   border: none;
+}
+.main__feedback-map {
+  height: 100%;
+}
+
+.main__footer {
+  margin-top: auto;
+  height: 90px;
+}
+.main__footer-body {
+  width: 1200px;
+  margin: 37px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.main__footer-phone {
+  margin-right: 42px;
+}
+.main__footer-copyright {
+  margin-left: auto;
 }

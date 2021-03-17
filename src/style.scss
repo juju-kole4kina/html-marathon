@@ -4,13 +4,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 //==========================================
 //=============VARIABLES========================
+//=========font============
 $ff: "Montserrat", sans-serif;
-$bg-btn: #cc8b86;
+//===========================
+//==========colors==========
 $color: #533738;
+//========================
+//=========backgrounds========
+$bg-btn: #cc8b86;
 $bg1: #efe6e4;
 $bg2: #8d7370;
 $bg-team: #e2c4ba;
 $bg-form: #f6ede9;
+//==========================
+//==========width=============
+$minwidth: 320px;
+$mw: 1200;
+$md1: $mw + 12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
+//=============================
 
 //============================================
 //===============MIXINS=======================
@@ -366,6 +380,7 @@ body {
 .main {
    &__feedback {
       background-color: $bg2;
+      padding: 0;
    }
    &__feedback-wrapper {
       width: 1200px;
@@ -411,6 +426,7 @@ body {
    }
 
    &__feedback-map {
+      height: 100%;
    }
 }
 .title {
@@ -421,3 +437,32 @@ body {
 }
 
 //=========================================================
+//============================FOOTER=======================
+.main {
+   &__footer {
+      margin-top: auto;
+      height: 90px;
+   }
+
+   &__footer-body {
+      width: 1200px;
+      margin: 37px auto;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__footer-phone {
+      margin-right: 42px;
+   }
+
+   &__footer-address {
+   }
+
+   &__footer-copyright {
+      margin-left: auto;
+   }
+}
+.text {
+}
+
+//==========================================================
