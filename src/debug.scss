@@ -31,9 +31,10 @@ $md4: 479.98;
 //===========================================
 //===========ENVELOPE==========================
 .wrapper {
+   // position: relative;
    width: 100%;
-   min-height: 100%;
-   overflow: hidden;
+   //min-height: 100%;
+   //overflow: hidden;
 
    font-family: $ff;
    color: $color;
@@ -58,21 +59,28 @@ $md4: 479.98;
 //===================================================
 
 //=================HEADER=======================
-//body {
-//  font-family: $ff;
-// color: $color;
-//}
+header {
+   background: url("../img/header/1.jpg") no-repeat;
+   background-size: cover;
+   height: 900px;
+}
+a {
+   color: $color;
+}
 .container {
-   padding: 36px 0 16px 0;
+}
+.header {
+   width: 1400px;
    height: 100px;
+   padding: 36px 0 16px 0;
    margin: 0 auto;
-   padding: 0 15px;
 }
 .header-body {
-   position: sticky;
+   margin: 0 auto;
+   width: 1200px;
+   position: fixed;
    z-index: 10;
    padding: 30px 0;
-   margin-bottom: 90px;
    display: flex;
    font-size: 16px;
    justify-content: space-between;
@@ -92,8 +100,6 @@ $md4: 479.98;
    margin: 0 auto;
    &__link {
       padding-right: 30px;
-      &:hover {
-      }
       & span {
          &:hover {
             border-bottom: 2px solid $color;
@@ -108,38 +114,44 @@ $md4: 479.98;
    text-align: center;
 }
 .header-body-phone {
+   margin-left: auto;
    &__text {
-      margin-left: auto;
    }
 }
 
 //==============================================
 //==============MAIN============================
 .content {
+   padding: 0 0 16px 0;
    background-color: $bg1;
+   //position: relative;
+   //top: -160px;
 }
 .main {
-   position: absolute;
-   top: 0;
    width: 100%;
-   padding: 150px 82px 16px 82px;
-   background: url("../img/header/1.jpg") no-repeat;
-   background-size: cover;
-   height: 750px;
+   padding: 100px 82px 16px 82px;
+   //background: url("../img/header/1.jpg") no-repeat;
+   //background-size: 1905px;
+   //height: 700px;
    &__column {
       margin: 0 auto;
       padding: 0 15px;
    }
 }
+.main-content {
+}
 .main-body {
    &__title {
       font-size: 50px;
+      line-height: 62px;
       text-align: left;
       margin-bottom: 24px;
    }
 
    &__text {
       margin-bottom: 60px;
+      font-size: 18px;
+      line-height: 30px;
    }
 
    &__buttons {
@@ -148,6 +160,8 @@ $md4: 479.98;
 .title {
 }
 .text {
+   font-size: 18px;
+   line-height: 30px;
 }
 .main-body-buttons {
    &__item {
@@ -160,3 +174,368 @@ $md4: 479.98;
 }
 
 //=============================================
+//===================ABOUT========================
+.about {
+   padding-top: 65px;
+   &__header-block {
+      margin: 0 0 40px 0;
+   }
+
+   &__row {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+   }
+
+   &__image {
+   }
+}
+.container {
+}
+.about-content {
+   padding-bottom: 20px;
+   height: 516px;
+}
+.header-block {
+   &__title {
+   }
+}
+.title {
+   font-weight: 400;
+   text-transform: uppercase;
+   font-size: 40px;
+   text-align: center;
+   margin: 0 0 40px 0;
+}
+.about-body {
+   &__text {
+      width: 530px;
+      & p {
+         margin-top: 0;
+         margin-bottom: 40px;
+      }
+   }
+}
+.list {
+   background-color: $bg2;
+   color: #ffffff;
+   margin-top: auto;
+}
+.text {
+}
+.about-footer {
+   margin: 0 auto;
+   padding: 0 55px;
+   &__items {
+      padding: 80px 0;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__item {
+      text-transform: uppercase;
+      font-size: 30px;
+      text-align: center;
+      line-height: 40px;
+   }
+}
+
+//=================================================
+//=================PORTFOLIO=========================
+.portfolio {
+   &__portfolio-header-block {
+   }
+
+   &__gallery {
+   }
+
+   &__gallery-items {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 40px;
+   }
+
+   &__column {
+      margin-bottom: 20px;
+   }
+
+   &__more {
+      text-align: center;
+      margin-bottom: 50px;
+   }
+}
+.portfolio-content {
+   margin: 0 auto;
+   padding: 65px 0 20px 0;
+}
+.container {
+}
+.portfolio-herder-block-title {
+   margin-bottom: 40px;
+   text-align: left;
+}
+
+.more {
+   &__link {
+      & span {
+         font-weight: 500;
+         font-size: 30px;
+
+         margin-right: 10px;
+      }
+      &::after {
+         content: url("/img/works/Arrow.svg");
+      }
+   }
+}
+
+//=====================================================
+//====================TEAM==============================
+.team {
+   background-color: $bg-team;
+   padding: 65px 0 20px 0;
+
+   &__team-header-block {
+   }
+
+   &__members {
+   }
+
+   &__members-items {
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 35px;
+   }
+
+   &__column {
+      width: 320px;
+   }
+
+   &__members-image {
+      margin-bottom: 10px;
+   }
+
+   &__members-text {
+      width: 310px;
+      line-height: 30px;
+      font-size: 18px;
+      padding-right: 10px;
+      text-align: left;
+   }
+
+   &__work {
+   }
+
+   &__work-body {
+   }
+}
+.container {
+}
+.team-header-block-title {
+   margin-bottom: 40px;
+}
+.title {
+}
+.text {
+}
+.work {
+   &__header-block {
+      margin-bottom: 40px;
+   }
+
+   &__header-block-title {
+   }
+}
+.work-body {
+   &__items {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      margin-bottom: 80px;
+   }
+
+   &__column {
+      width: 285px;
+   }
+
+   &__number {
+      margin: 0 auto;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      background-color: $bg2;
+      font-size: 30px;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 500;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__text {
+      width: 285px;
+      text-align: center;
+   }
+}
+
+//=====================================================
+//============================REVIEWS====================
+.reviews {
+   padding: 65px 0 65px 0;
+   &__reviews-header-block {
+   }
+
+   &__reviews-body {
+      padding: 0;
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+   }
+}
+.container {
+}
+.reviews-header-blovk-title {
+}
+.title {
+}
+.reviews-body {
+   &__arrow-left {
+      margin-right: 0;
+   }
+
+   &__text {
+      width: 400px;
+
+      & p {
+         margin-bottom: 10px;
+      }
+   }
+
+   &__images {
+      width: 400px;
+      & img {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__arrow-tight {
+      margin-left: 0;
+   }
+}
+.arrow {
+   display: block;
+   width: 72px;
+   height: 72px;
+   border-radius: 50%;
+   background-color: $bg-btn;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.text {
+}
+.review-pic {
+}
+
+//========================================================
+//=================FEEDBACK===============================
+.feedback {
+   background-color: $bg2;
+   padding: 0;
+
+   &__column {
+   }
+
+   &__form {
+      padding-top: 50px;
+   }
+
+   &__feedback-form {
+      width: 500px;
+   }
+   &__feedback-map {
+      height: 100%;
+   }
+}
+.feedback-body {
+   display: flex;
+   justify-content: center;
+}
+.container {
+}
+.form {
+   &__title {
+      color: #ffffff;
+      text-align: left;
+   }
+}
+.title {
+}
+.feedback-form {
+   &__text {
+      color: #ffffff;
+      width: 450px;
+   }
+
+   &__input {
+      width: 450px;
+      height: 35px;
+      background: transparent;
+      margin-bottom: 35px;
+      border: none;
+      border-bottom: 1px solid #ffffff;
+      &::placeholder {
+         color: $bg-form;
+         font-weight: 400;
+         font-size: 18px;
+      }
+   }
+   &__feedback-btn {
+   }
+}
+.text {
+}
+.btn {
+   border: none;
+}
+.main {
+}
+//==========================================================
+//==================FOOTER====================================
+.footer {
+   height: 90px;
+   margin-top: auto;
+   &__footer-body {
+      margin: 37px auto;
+      display: flex;
+      justify-content: space-between;
+   }
+}
+.container {
+}
+.footer-body {
+   &__footer-phone {
+      margin-right: 42px;
+   }
+
+   &__footer-address {
+   }
+
+   &__footer-copyright {
+      margin-left: auto;
+   }
+}
+.text {
+}
+
+//===========================================================
