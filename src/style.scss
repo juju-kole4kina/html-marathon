@@ -16,6 +16,7 @@ $bg1: #efe6e4;
 $bg2: #8d7370;
 $bg-team: #e2c4ba;
 $bg-form: #f6ede9;
+$bg-hover: rgba(100, 72, 69, 0.8);
 //==========================
 //==========width=============
 $minwidth: 320px;
@@ -28,161 +29,206 @@ $md4: 479.98;
 
 //============================================
 //===============MIXINS=======================
-@mixin font-400 {
-   font-family: $ff;
-   font-weight: 400;
-}
-@mixin font-500 {
-   font-family: $ff;
-   font-weight: 500;
-}
-//=============================================
-//==================HEADER======================
-body {
-   margin: 0;
+//===========================================
+//===========ENVELOPE==========================
+
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+   overflow: hidden;
+
    font-family: $ff;
    color: $color;
 }
-
-.header {
-   padding: 36px 0 16px 0;
+//==============================================
+//===================MAIN GRID=======================
+.container {
+   max-width: $mw + px;
+   margin: 0 auto;
+   width: 100%;
+   @media (max-width: $md1+px) {
+      max-width: 970px;
+   }
+   @media (max-width: $md2+px) {
+      max-width: 750px;
+   }
+   @media (max-width: $md3+px) {
+      max-width: none;
+      padding: 0 10px;
+   }
+}
+//===================================================
+.wrapper {
+}
+.container {
+}
+body {
+}
+a {
+   color: $color;
+}
+//=================HEADER=======================
+header {
    background: url("../img/header/1.jpg") no-repeat;
    background-size: cover;
-   height: 750px;
-   &__container {
-      width: 1400px;
-      margin: 0 auto;
-      padding: 0 15px;
-   }
-   &__content-top {
-      margin-bottom: 90px;
-      display: flex;
-      font-size: 16px;
-      justify-content: space-between;
-      align-items: center;
-   }
-
+   height: 716px;
+}
+.header {
+   width: 1400px;
+   //height: 30px;
+   padding: 10px 4px 16px 4px;
+   margin: 0 auto;
+}
+.header-body {
+   margin: 0 auto;
+   width: 1200px;
+   position: fixed;
+   z-index: 10;
+   padding: 16px 0;
+   display: flex;
+   font-size: 16px;
+   justify-content: space-between;
+   align-items: center;
    &__logo {
       background: url("../img/header/logo.svg") left no-repeat;
-      padding: 0 0 0 25px;
-      margin-right: auto;
+      padding: 0 25px;
+      margin-right: 38px;
    }
 
-   &__brand {
+   &__header-menu {
+      margin: 0 auto;
+   }
+
+   &__header-phone {
+      margin-left: 15px;
+      padding-bottom: 10px;
+      background: linear-gradient(90deg, transparent, $color, transparent) bottom / var(--d, 0) 2px no-repeat;
+      transition: 0.5s;
+      &:hover {
+         --d: 100%;
+      }
+   }
+}
+.logo {
+   &__text {
       text-align: center;
       font-weight: 400;
       font-size: 16px;
    }
-
-   &__menu {
-   }
-
-   &__phone {
-      margin-left: auto;
-   }
-
-   &__number {
-   }
-
-   &__content-main {
-      margin-left: 90px;
-   }
-
-   &__title {
-      font-size: 50px;
-      text-align: left;
-      margin-bottom: 24px;
-   }
-
-   &__text {
-      margin-bottom: 60px;
-   }
-
-   &__button {
-   }
 }
-._container {
-}
-
-.menu {
-   &__body {
-   }
-
-   &__list {
+.header-menu {
+   &__menu-list {
       display: flex;
       justify-content: space-between;
       text-align: center;
+      li:not(:last-child) {
+         margin-right: 27px;
+         &:first-child {
+            margin-right: 32px;
+         }
+         &:nth-child(2) {
+            margin-right: 27px;
+         }
+         &:nth-child(3) {
+            margin-right: 28px;
+         }
+         &:nth-child(4) {
+            margin-right: 28px;
+         }
+         &:nth-child(5) {
+            margin-right: 30px;
+         }
+      }
+   }
+}
+.menu-list {
+   &__link {
+      display: inline-block;
+      padding-bottom: 10px;
+      background: linear-gradient(90deg, transparent, $color, transparent) bottom / var(--d, 0) 2px no-repeat;
+      transition: 0.5s;
+      &:hover {
+         --d: 100%;
+      }
+   }
+}
+.header-phone {
+   &__text {
+   }
+}
+//======
+.main {
+   width: 100%;
+   padding: 129px 82px 16px 74px;
+   &__column {
+      margin: 0 auto;
+      padding: 0 15px;
+   }
+}
+.main-content {
+}
+.main-body {
+   &__title {
+      font-size: 50px;
+      line-height: 62px;
+      text-align: left;
+      margin-bottom: 20px;
    }
 
-   &__link {
-      padding-right: 30px;
+   &__text {
+      margin-bottom: 50px;
+      font-size: 18px;
+      line-height: 30px;
+   }
+
+   &__buttons {
    }
 }
 .text {
    font-size: 18px;
    line-height: 30px;
 }
+.main-body-buttons {
+   &__item {
+      transition: all 0.3s;
+
+      &:hover {
+         color: #fff;
+      }
+   }
+}
 .btn {
+   cursor: pointer;
    background-color: $bg-btn;
    font-size: 20px;
    padding: 25px 65.88px 24px 67.91px;
+   border: none;
+   font-weight: 500;
+   color: $color;
 }
+//======================================================================
 
-//==============================================
-//==================MAIN==========================
-.main {
+//=================================ABOUT==================================
+.content {
+   padding: 0 0 16px 0;
    background-color: $bg1;
-   margin-bottom: auto;
-   &__about {
-      padding: 65px 0 20px 0;
-      //height: 850px;
+}
+.about {
+   padding-top: 68px;
+   &__about-header-block {
+      margin: 0 0 10px 0;
    }
 
-   &__title-about {
-      margin: 0 0 40px 0;
-   }
-
-   &__about-body {
+   &__row {
       margin: 0 auto;
-      width: 1200px;
+
       display: flex;
       justify-content: space-around;
       align-items: flex-start;
    }
-
-   &__pic-about {
-   }
-
-   &__pic {
-   }
-
-   &__text {
-      width: 530px;
-   }
-   &__p {
-      margin-top: 0;
-      margin-bottom: 40px;
-   }
-   &__list {
-      background-color: $bg2;
-      color: #ffffff;
-      margin-top: auto;
-   }
-   &__inner {
-      width: 1400px;
-      margin: 0 auto;
-   }
-   &__items {
-      padding: 80px 0;
-      display: flex;
-      justify-content: space-around;
-   }
-
-   &__item {
-      text-transform: uppercase;
-      font-size: 30px;
-      text-align: center;
-      line-height: 40px;
+}
+.about-header-block {
+   &__title {
    }
 }
 .title {
@@ -190,110 +236,246 @@ body {
    text-transform: uppercase;
    font-size: 40px;
    text-align: center;
+   margin: 0 0 40px 0;
 }
-.text {
+.about-content {
+   margin-right: 37px;
+   height: 490px;
+   &__image {
+      margin-left: 48px;
+   }
 }
-
-//==================================================
-//=====================WORKS========================
-.main {
-   &__works {
-      width: 1200px;
-      margin: 0 auto;
-      padding: 65px 0 20px 0;
-   }
-
-   &__works-title {
-      margin-bottom: 40px;
-      text-align: left;
-   }
-
-   &__works-body {
-   }
-
-   &__works-gallery {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-bottom: 40px;
-   }
-   &__works-items {
-      margin-bottom: 20px;
-   }
-   //&__works-item {
-
-   //}
-
-   &__watch-all {
-      display: block;
-      font-weight: 500;
-      font-size: 30px;
-      text-align: center;
-      margin-bottom: 50px;
-      &::after {
-         content: url("/img/works/Arrow.svg");
+.about-body {
+   &__text {
+      width: 530px;
+      & p {
+         margin-top: 2px;
+         margin-bottom: 30px;
       }
    }
 }
-.title {
-}
-
-//===================================================
-//===================TEAM============================
-.main {
-   &__team {
-      background-color: $bg-team;
-      padding: 65px 0 20px 0;
-   }
-
-   &__title-team {
-   }
-
-   &__team-body {
-      width: 1200px;
+.about-list {
+   background-color: $bg2;
+   color: #ffffff;
+   margin-top: auto;
+   &__about-footer {
       margin: 0 auto;
+      padding: 0 85px;
    }
-
-   &__team-persons {
+}
+.about-footer {
+   &__items {
+      padding: 64px 0;
       display: flex;
       justify-content: space-between;
-      padding-bottom: 35px;
    }
 
-   &__person {
+   &__item {
+      text-transform: uppercase;
+      font-size: 30px;
+      text-align: center;
+      line-height: 45px;
+      &:first-child {
+         margin-right: 25px;
+      }
+      &:nth-child(2) {
+         margin-right: 25px;
+      }
+      & span {
+         font-size: 50px;
+         line-height: 68px;
+      }
+   }
+}
+//=====================================================================
+
+//===================================PORTFOLIO==========================
+.portfolio {
+   padding-top: 68px;
+   &__portfolio-header-block {
+   }
+
+   &__gallery {
+   }
+
+   &__more {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
+.portfolio-content {
+   margin: 0 auto;
+   padding: 0 0 10px 0;
+}
+.portfolio-header-block {
+   &__title {
+      margin-bottom: 35px;
+      text-align: left;
+   }
+}
+.gallery {
+   &__gallery-list {
+      display: grid;
+      grid-column-gap: 20px;
+      grid-row-gap: 30px;
+      grid-template-columns: repeat(12, 1fr);
+      margin-bottom: 40px;
+   }
+
+   &__column {
+      &:nth-child(1) {
+         grid-column: span 5;
+      }
+      &:nth-child(4) {
+         grid-column: span 5;
+      }
+      &:nth-child(2),
+      :nth-child(3) {
+         grid-column: span 7;
+      }
+      &:nth-child(3) {
+         grid-column: span 7;
+      }
+      height: 451px;
+   }
+
+   &__gallery-items {
+      position: relative;
+      padding: 0 0 85% 0;
+   }
+}
+
+.gallery-items {
+   &__gallery-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      //width: 100%;
+      //height: 100%;
+      object-fit: cover;
+   }
+
+   &__gallery-info {
+      background-color: $bg-hover;
+      width: 100%;
+      height: 451px;
+      margin: 0 auto;
+      color: #ffffff;
+      position: absolute;
+      top: 0;
+      //z-index: 1;
+      transition: opacity 0.3s;
+      opacity: 0;
+      &:hover {
+         opacity: 1;
+      }
+   }
+}
+.gallery-info {
+   &__title {
+      width: 270px;
+      margin: 83px auto 30px;
+      text-align: center;
+      font-size: 30px;
+      line-height: 37px;
+   }
+
+   &__text {
+      width: 418px;
+      margin: 0 auto;
+   }
+}
+.more {
+   &__link {
+      padding: 0 100px;
+      display: block;
+      transition: opacity 0.3s linear;
+      background: url("../img/works/Arrow.svg") 330px 10px no-repeat;
+      margin-bottom: 50px;
+      & span {
+         font-weight: 500;
+         font-size: 30px;
+         text-align: center;
+      }
+      &:hover,
+      :focus {
+         opacity: 0.6;
+      }
+   }
+}
+//=================================================================
+
+//===================================TEAM===========================
+.team {
+   background-color: $bg-team;
+   padding: 55px 0 10px 0;
+   &__team-header-block {
+   }
+
+   &__members {
+   }
+
+   &__work {
+      padding-top: 30px;
+   }
+}
+.team-header-block-title {
+   margin-bottom: 40px;
+}
+.members {
+   &__members-items {
+      margin: 0 20px;
+      padding: 0 50px;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 10px;
+   }
+
+   &__column {
       width: 320px;
    }
-
-   &__preson-photo {
-      margin-bottom: 5px;
+}
+.members-items {
+   &__members-image {
+      margin-bottom: 12px;
    }
 
-   &__person-info {
+   &__members-text {
       width: 310px;
       line-height: 30px;
       font-size: 18px;
       padding-right: 10px;
       text-align: left;
    }
-
-   &__team-works {
-   }
-
-   &__title-team-works {
+}
+.work {
+   &__work-header-block {
+      margin-top: 20px;
       margin-bottom: 40px;
    }
 
-   &__works-steps {
+   &__work-header-block-title {
+   }
+
+   &__work-body {
+   }
+}
+.work-body {
+   &__work-items {
       display: flex;
       justify-content: space-between;
       text-align: center;
+      margin-bottom: 80px;
    }
 
-   &__work-step {
+   &__column {
+      width: 285px;
    }
-
-   &__work-step-number {
+}
+.work-items {
+   &__number {
       margin: 0 auto;
       height: 70px;
       width: 70px;
@@ -310,57 +492,87 @@ body {
       align-items: center;
    }
 
-   &__work-step-text {
+   &__text {
       width: 285px;
       text-align: center;
    }
 }
-.title {
-}
-.text {
-}
+//==================================================================
 
-//===================================================
-//=======================REVIEWS===========================
-.main {
-   &__reviews {
-      padding: 65px 0 65px 0;
-   }
+//===========================REVIEWS================================
+.reviews {
+   padding: 58px 0 45px 0;
 
-   &__title-reviews {
+   &__reviews-header-block {
    }
 
    &__reviews-body {
-      padding: 0;
-      width: 1200px;
+      padding: 0 70px;
       margin: 0 auto;
       display: flex;
       justify-content: space-around;
       align-items: center;
    }
-
+}
+.reviews-header-block-title {
+}
+.reviews-body {
    &__arrow-left {
-      margin-right: 0;
+      margin-right: 0px;
+      position: absolute;
+      &:hover {
+         animation: arrow-left 0.5s linear infinite;
+      }
    }
 
-   &__reviews-text {
+   &__text {
       width: 400px;
+
+      & p {
+         margin-bottom: 10px;
+      }
    }
 
-   &__reviews-photo {
+   &__images {
       width: 400px;
       & img {
-         margin-bottom: 15px;
+         margin-bottom: 20px;
       }
    }
 
    &__arrow-right {
       margin-left: 0;
+      position: absolute;
+      &:hover {
+         animation: arrow-right 0.5s linear infinite;
+      }
    }
 }
-.title {
+@keyframes arrow-left {
+   0% {
+      right: 0;
+   }
+   50% {
+      right: 10px;
+   }
+   100% {
+      right: 0;
+   }
+}
+@keyframes arrow-right {
+   0% {
+      left: 0;
+   }
+   50% {
+      left: 10px;
+   }
+   100% {
+      left: 0;
+   }
 }
 .arrow {
+   display: block;
+   position: relative;
    width: 72px;
    height: 72px;
    border-radius: 50%;
@@ -370,46 +582,54 @@ body {
    justify-content: center;
    align-items: center;
 }
-.text {
-}
 .review-pic {
 }
+//===============================================================
 
-//======================================================
-//=================FEEDBACK===========================
-.main {
-   &__feedback {
-      background-color: $bg2;
-      padding: 0;
+//===========================FEEDBACK=============================
+.feedback {
+   height: 624px;
+   background-color: $bg2;
+   &__column {
+      padding: 0 10px;
    }
-   &__feedback-wrapper {
-      width: 1200px;
-      margin: 0 auto;
-      padding: 0 15px;
-   }
-   &__feedback-body {
-      display: flex;
-      justify-content: center;
-   }
+}
+.feedback-body {
+   display: flex;
+   justify-content: center;
+   margin: 0 auto;
+   padding-left: 80px;
    &__feedback-form {
       width: 500px;
    }
 
-   &__title-feedback {
-      text-align: left;
+   &__feedback-map {
+   }
+}
+.feedback-form {
+   &__title {
       color: #ffffff;
+      text-align: left;
+      margin-bottom: 25px;
+      margin-top: 45px;
    }
 
-   &__feedback-text {
+   &__text {
       color: #ffffff;
       width: 450px;
+      margin-bottom: 41px;
    }
-   &__feedback-input {
-      width: 450px;
-      height: 35px;
+
+   &__feedback-form-items {
+      margin-top: 48px;
+   }
+}
+.feedback-form-items {
+   &__input {
+      width: 508px;
+      height: 33px;
       background: transparent;
       margin-bottom: 35px;
-
       border: none;
       border-bottom: 1px solid #ffffff;
       &::placeholder {
@@ -418,41 +638,29 @@ body {
          font-size: 18px;
       }
    }
+
    &__feedback-btn {
-      border: none;
-   }
-
-   &__feedback-location {
-   }
-
-   &__feedback-map {
-      height: 100%;
+      transition: all 0.3s;
+      &:hover {
+         color: #fff;
+      }
    }
 }
-.title {
-}
-.text {
-}
-.btn {
-}
+//============================================================
 
-//=========================================================
-//============================FOOTER=======================
-.main {
-   &__footer {
-      margin-top: auto;
-      height: 90px;
-   }
-
+//========================FOOTER============================
+.footer {
+   height: 80px;
+   margin-top: auto;
    &__footer-body {
-      width: 1200px;
-      margin: 37px auto;
+      margin-top: 35px;
       display: flex;
       justify-content: space-between;
    }
-
+}
+.footer-body {
    &__footer-phone {
-      margin-right: 42px;
+      margin-right: 45px;
    }
 
    &__footer-address {
@@ -462,7 +670,5 @@ body {
       margin-left: auto;
    }
 }
-.text {
-}
 
-//==========================================================
+//===========================================================
