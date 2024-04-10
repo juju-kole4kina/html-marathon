@@ -24,6 +24,7 @@
   <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" width="40" height="40" />&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="Javascript" title="Javascript" width="40" height="40" />&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" alt="Sass" title="Sass" width="40" height="40" />&nbsp;
+  <img src="https://flyclipart.com/thumb2/google-maps-on-android-gets-a-new-design-with-quick-access-825207.png" alt="Google maps API" title="Google maps API" width="40" height="40" />&nbsp;
 </div>
 
 ---
