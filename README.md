@@ -1,7 +1,7 @@
 <h1 align="center">
   SCANDI. Сайт-визитка студии дизайна
 </h1>
-Вёрстка макета свйта-визитки студии дизайна интерьера в рамках марафона по вёрстке от "HTML Academy"
+Вёрстка макета сайта-визитки студии дизайна интерьера в рамках марафона по вёрстке от "HTML Academy"
 
 [Ссылка на GitHub Pages](https://juju-kole4kina.github.io/html-marathon/src/index.html)
 
